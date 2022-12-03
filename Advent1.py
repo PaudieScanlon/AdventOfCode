@@ -1,4 +1,4 @@
-file = open("elfCalories.txt", "r")
+file = open("advent1Data.txt", "r")
 data = file.read()
 elfCal=data.split("\n")
 maxLen = len(elfCal)
@@ -6,7 +6,6 @@ maxLen = len(elfCal)
 for i in range(maxLen):
     if elfCal[i] == "":
         elfCal[i] = 0
-        i -=1
 calList=[]
 x = 0
 for i in range(maxLen):
@@ -15,4 +14,5 @@ for i in range(maxLen):
     else:
         calList.append(x)
         x = 0
-print(max(calList))
+calList = calList.sort()
+print((calList[-1]))
