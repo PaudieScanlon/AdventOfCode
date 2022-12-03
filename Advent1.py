@@ -14,5 +14,8 @@ for i in range(maxLen):
     else:
         calList.append(x)
         x = 0
-calList = calList.sort()
-print((calList[-1]))
+calList.sort(reverse=True)
+total = 0
+for i in range (3):
+    total = total+calList[i]
+print(total)
